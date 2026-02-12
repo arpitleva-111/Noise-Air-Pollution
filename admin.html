@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Admin Control Panel</h2>
+
+  <label>Set AQI Value:</label><br>
+  <input type="number" id="adminAqi"><br><br>
+
+  <button onclick="setAQI()">Update AQI</button>
+</div>
+
+<script>
+function setAQI(){
+  let val = document.getElementById("adminAqi").value;
+  localStorage.setItem("adminAQI", val);
+  alert("AQI Updated!");
+}
+</script>
+
+<div class="footer-pro">
+  Noise & Air Pollution | Silver Oak University 
+</div>
+</body>
+</html>
